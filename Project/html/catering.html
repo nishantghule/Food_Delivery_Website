@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyOnlineMeal - Catering Service</title>
+  <link  rel="stylesheet" href="../css/catering.css">
+</head>
+<body>
+  <div class="back-button-container">
+    <button onclick="goBack()">Go Back to Home Page</button>
+  </div>
+  <div class="container">
+    <h2>&nbsp;&nbsp;Welcome To MyOnlineMeal</h2>
+  <div class="container">
+    <h2>Food Catering Order Form</h2>
+    <form id="cateringOrderForm" onsubmit="alertmsg()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone"  minlength="10" maxlength="10"
+        pattern="^[0-9-+\s()]*$" title="Please enter a valid phone number" required>
+      </div>
+      <div class="form-group">
+        <label for="event">Event Type:</label>
+        <select id="event" name="event" required>
+          <option value="" disabled selected>Select event type</option>
+          <option value="wedding">Wedding</option>
+          <option value="corporate">Corporate Event</option>
+          <option value="party">Party</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="guests">Number of Guests:</label>
+        <input type="number" id="guests" name="guests" required>
+      </div>
+      <div class="form-group">
+        <label for="menu">Menu Details:</label>
+        <textarea id="menu" name="menu" rows="4" required></textarea>
+      </div>
+      <input type="submit" value="Place Order">
+    </form>
+  </div>
+  <script>
+    function alertmsg() {
+      alert("Catering Service Order Placed Successfully!");
+    }
+   
+      function goBack() {
+        window.location.href = "../index.html";
+      }
+  </script>
+</body>
+</html>

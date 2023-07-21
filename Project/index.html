@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Best Online Food Delivery Service in India | MyOnlineMeal.com</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <div id="logo">
+        <img src="img/logo.jpg" alt="MyOnlineMeal.com" />
+      </div>
+      <ul>
+        <li class="item"><a href="#home">Home</a></li>
+        <li class="item"><a href="#services-container">Services</a></li>
+        <li class="item"><a href="#client-section">Our Clients</a></li>
+        <li class="item"><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <section id="home">
+      <h1 class="h-primary">Welcome to MyOnlineMeal</h1>
+      <p>
+        "Delight Your Taste Buds: Order, Savor, Repeat - Your Online Food Haven
+        Awaits!" "From Cravings to Catering: Discover a World of Flavor at Your
+        Fingertips!"
+      </p>
+      <button class="btn"><a style="text-decoration: none; color:white" href="#services-container">Order Now</a></button>
+    </section>
+
+    <section id="services-container">
+      <h1 class="h-primary center">Our Services</h1>
+      <div id="services">
+        <div class="box">
+          <img src="img/1.png" alt="" />
+          <h2 class="h-secondary center">Food Catering</h2>
+          <p class="center">
+            "Discover a culinary masterpiece at MyOnlineMeal, where we
+            elevate every occasion with an exquisite food catering service. Our
+            talented chefs weave flavors into a symphony of taste, leaving
+            guests mesmerized and events unforgettable. With personalized menus,
+            attention to detail, and a seamless blend of tradition and
+            innovation, we create a gastronomic journey like no other.
+          </p>
+          <div class="center">
+          <a href="html/catering.html" target="_blank">
+            <button class="btn" style="text-decoration: none; color:white" >Order Now</button>
+          </a></div>
+        </div>
+        <div class="box">
+          <img src="img/2.png" alt="" />
+          <h2 class="h-secondary center">Bulk Ordering</h2>
+          <p class="center">
+            Experience the convenience and delight of bulk ordering at
+            MyOnlineMeal. Whether it's a corporate event, family gathering, or a
+            party with friends, our bulk ordering service has you covered.
+            Indulge in the same exquisite flavors and culinary craftsmanship
+            that make our regular offerings special, now available in larger
+            quantities to cater to your group's needs.
+          </p>
+          <div class="center">
+            <a href="html/bulkOrder.html" target="_blank">
+              <button class="btn" style="text-decoration: none; color:white" >Order Now</button>
+            </a></div>
+        </div>
+        <div class="box">
+          <img src="img/3.png" alt="" />
+          <h2 class="h-secondary center">Fast Food Delivery</h2>
+          <p class="center">
+            "Embark on a delightful food ordering experience at MyOnlineMeal.
+             Explore a diverse menu of mouthwatering dishes, carefully
+            curated from the finest local restaurants. With just a few clicks,
+            you can indulge in your favorite meals, conveniently delivered to
+            your doorstep. Whether you're craving a sizzling starter, a hearty
+            main course, or a luscious dessert, our user-friendly platform
+            ensures a seamless ordering process. 
+          </p>
+          <div class="center">
+            <a href="html/foodDelivery.html" target="_blank">
+              <button class="btn" style="text-decoration: none; color:white" >Order Now</button>
+            </a></div>
+        </div>
+      </div>
+       <section>
+        <h1 class="h-primary center">Our Specialties</h1>
+        <div class="slider">
+            <div class="slides">
+              <img src="./img/veg.jpg" alt="Slide 1">
+              <img src="./img/nonveg.jpg" alt="Slide 2">
+              <img src="./img/pizza.jpg" alt="Slide 3">
+              <img src="./img/slide-4.jpg" alt="Slide 4">
+              <img src="./img/slide-5.jpg" alt="Slide 5">
+              <img src="./img/slide-6.jpg" alt="Slide 6">
+              <img src="./img/slide-7.jpg" alt="Slide 7">
+              <img src="./img/slide-8.jpg" alt="Slide 8">
+            </div>
+          </div>
+      </section>
+
+    <br>
+<!-- Javascript code for slideshow -->
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        const slides = document.querySelectorAll(".slides img");
+        for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+       slideIndex++;
+       if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 1800); 
+}
+</script>
+
+    <section id="contact">
+      <h1 class="h-primary center">Contact Us</h1>
+      <div id="contact-box">
+        <form action="./html/submitted.html">
+          <div class="form-group">
+            <label for="name">Name: </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name" required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email: </label>
+            <input
+              type="email"
+              name="name"
+              id="email"
+              placeholder="Enter your email" required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number: </label>
+            <input
+              id="phone"  type="tel" id="phone" name="phone"
+              placeholder="Enter your phone"   minlength="10" maxlength="10"
+              pattern="^[0-9-+\s()]*$" title="Please enter a valid phone number" required >
+          </div>
+          <div class="form-group">
+            <label for="message">Message: </label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10" placeholder="Enter your response" required
+            ></textarea>
+          </div>
+          <div  id="submitbuttondiv">
+            <input type="submit" value="SUBMIT" id="submitbutton" >
+          </div>
+        </form>
+      </div>
+    </section>
+    <section id="footer">
+        <div id="footer-list-style">
+            <img id="footer-logo" src="./img/logo.jpg" alt="Logo Not Found">
+        </div>
+        <div id="footer-list-style">
+            <ul>
+              <li class="item-heading"><h2>Company</h2></li>
+              <li class="item"><a style="text-decoration: none; color:white" href="">Help</li></a> 
+              <li class="item"><a style="text-decoration: none; color:white"  href="">Create a business account</a></li>
+              <li class="item"><a style="text-decoration: none; color:white"  href="">Add your restaurant</a></li>
+              <li class="item"><a style="text-decoration: none; color:white"  href="">Sign up to deliver</a></li>
+          </div>
+          <div id="footer-list-style">
+          <ul>
+            <li class="item-heading"><h2>Social Links</h2></li>
+            <li class="item"><a style="text-decoration: none; color:white" href="">Instagram</li></a> 
+            <li class="item"><a style="text-decoration: none; color:white"   href="">Facebook</a></li>
+            <li class="item"><a style="text-decoration: none; color:white"  href="">Twitter</a></li>
+            <li class="item"><a style="text-decoration: none; color:white"  href="">Whatsapp</a></li>
+          </ul>
+        </div>
+        <div id="footer-list-style">
+          <ul>
+            <li class="item-heading"><h2>Services</h2></li>
+            <li class="item"><a style="text-decoration: none; color:white" href="./html/foodDelivery.html">Food Delievery</a></li>
+            <li class="item"><a style="text-decoration: none; color:white" href="./html/catering.html">Catering Service</a></li>
+            <li class="item"><a style="text-decoration: none; color:white" href="./html/bulkOrder.html">Bulk Food Order</a></li>
+            <li class="item"><a style="text-decoration: none; color:white" href="./html/futurescope.html">Future Scope</a></li>
+          </ul>
+        </div>
+      </div>
+      </section>
+      <div  id="Desclaimer">
+        <h3>This site is protected by the Google Privacy Policy and Terms of Service apply.© 2023 www.myOnlineMeal.com</h3></div>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyOnlineMeal - Bulk Food Ordering</title>
+  <link rel="stylesheet" href="../css/catering.css">
+</head>
+<body>
+  <div class="back-button-container">
+    <button onclick="goBack()">Go Back to Home Page</button>
+  </div>
+  <div class="container">
+    <h2>&nbsp;&nbsp;Welcome To MyOnlineMeal</h2>
+    <div class="container">
+    <h2>Bulk Food Ordering Form</h2>
+    <form id="bulkOrderForm" onsubmit="return alertmsg()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone"  minlength="10" maxlength="10"
+        pattern="^[0-9-+\s()]*$" title="Please enter a valid phone number" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="items">Items to Order:</label>
+        <textarea id="items" name="items" rows="4" required></textarea>
+      </div>
+      <input type="submit" value="Place Bulk Order">
+    </form>
+  </div>
+</div>
+  <script>
+    function alertmsg() {
+      alert("Bulk Food Order Placed Successfully!");
+    }
+
+    function goBack() {
+      window.location.href = "../index.html";
+    }
+  </script>
+</body>
+</html>
